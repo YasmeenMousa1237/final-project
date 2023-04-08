@@ -53,3 +53,10 @@ Route::get('/about',[TaskController::class,'show_name']);
 Route::post('/about',[TaskController::class,'send_name']);
 Route::get('/contact',[TaskController::class,'index']);
 Route::get('/contact/{id}',[TaskController::class,'show']);
+Route::get('app',function(){
+
+return view('layout.app');
+});
+Route::get('/',function(){
+return view('tasks');
+});
